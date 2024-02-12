@@ -34,7 +34,7 @@ label {
 
 input {
     width: 40px;
-    text-align: right;
+    text-align: center;
     margin-right: 10px;
 }
 
@@ -44,7 +44,7 @@ input {
 }
 
 div p {
-    text-align: right;
+    text-align: center;
 }
 
 

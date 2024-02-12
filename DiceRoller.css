@@ -19,7 +19,8 @@ button {
 }
 
 #instructions-container {
-    text-align: center; /* Add this line to center-align the text */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px;  /* Add some top margin for spacing */
 }
 
 .dice-container {
@@ -45,4 +46,5 @@ input {
 div p {
     text-align: right;
 }
+
 

@@ -1,14 +1,18 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
     const rollButton = document.getElementById("rollButton");
-    rollButton.addEventListener("click", rollDice);
-    rollButton.focus();
+    if (rollButton) {
+        rollButton.addEventListener("click", rollDice);
+        rollButton.focus();
+    }
 });
 
 let rollCount = 0;
 
 function rollDice() {
     if (rollCount < 5) {
-         {
+        for (let i = 1; i <= 5; i++) {
             const randomValue = Math.floor(Math.random() * 6) + 1;
             document.getElementById(`dice${i}`).textContent = randomValue;
         }
@@ -17,7 +21,10 @@ function rollDice() {
 
     if (rollCount === 5) {
         displayResults();
-        document.getElementById("rollButton").disabled = true;
+        const rollButton = document.getElementById("rollButton");
+        if (rollButton) {
+            rollButton.disabled = true;
+        }
     }
 }
 
@@ -31,13 +38,20 @@ function displayResults() {
                                   <button id="rollAgainButton">Roll Again?</button>`;
     document.body.appendChild(resultContainer);
 
-    document.getElementById("rollAgainButton").addEventListener("click", rollAgain);
+    const rollAgainButton = document.getElementById("rollAgainButton");
+    if (rollAgainButton) {
+        rollAgainButton.addEventListener("click", rollAgain);
+    }
 }
 
 function rollAgain() {
     rollCount = 0;
-    document.getElementById("rollButton").disabled = false;
-    document.getElementById("rollButton").focus();
+    const rollButton = document.getElementById("rollButton");
+    if (rollButton) {
+        rollButton.disabled = false;
+        rollButton.focus();
+    }
+
     const resultContainer = document.querySelector("div");
     if (resultContainer) {
         resultContainer.remove(); // Remove the result container
@@ -47,6 +61,7 @@ function rollAgain() {
         document.getElementById(`dice${i}`).textContent = "";
     }
 }
+
 
 
 

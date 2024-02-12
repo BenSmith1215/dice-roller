@@ -37,3 +37,8 @@ input {
     margin-top: 10px;
     color: #666;
 }
+
+/* Ensure that the results are right-justified */
+div p {
+    text-align: right;
+}

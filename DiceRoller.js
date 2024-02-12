@@ -5,15 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
 let rollCount = 0;
 
 function rollDice() {
-    rollCount++;
-    if (rollCount <= 5) {
+    if (rollCount < 5) {
         for (let i = 1; i <= 5; i++) {
             const randomValue = Math.floor(Math.random() * 6) + 1;
             document.getElementById(`dice${i}`).value = randomValue;
         }
-        if (rollCount === 5) {
-            displayResults();
-        }
+        rollCount++;
+    }
+
+    if (rollCount === 5) {
+        displayResults();
+        document.getElementById("rollButton").disabled = true;
     }
 }
 
@@ -27,8 +29,6 @@ function displayResults() {
     resultContainer.innerHTML = `<p>Results: ${diceValues.join(', ')}</p>
                                   <button onclick="restart()">Roll Again</button>`;
     document.body.appendChild(resultContainer);
-
-    document.getElementById("rollButton").disabled = true;
 }
 
 function restart() {
@@ -40,4 +40,5 @@ function restart() {
         document.getElementById(`dice${i}`).value = "";
     }
 }
+
 

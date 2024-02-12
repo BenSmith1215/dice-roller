@@ -9,6 +9,13 @@
 <body onload="rollDice()">
     <div class="container">
         <h1>Yahtzee Dice Roller</h1>
+        <div id="instructions-container">
+            <p>Welcome to the Yahtzee Dice Roller!</p>
+            <p>Click the "Roll Dice" button to roll five 6-sided dice.</p>
+            <p>The results will be displayed in the corresponding Dice 1 to Dice 5 fields.</p>
+            <p>You can roll the dice up to 5 times. After the 5th roll, click "Roll Again?" to start over.</p>
+            <p id="instructions">Press Enter or click "Roll Dice" to roll.</p>
+        </div>
         <button id="rollButton" onclick="rollDice()">Roll Dice</button>
         <div class="dice-container">
             <!-- Use a loop to generate labels and input fields for Dice 1 to 5 -->
@@ -18,11 +25,9 @@
             <label for="dice1">Dice 1:</label>
             <input type="text" id="dice1" class="dice" readonly>
             <!-- Repeat for Dice 2 to 5 -->
-
-            <p id="instructions">Press Enter or click "Roll Dice" to roll.</p>
         </div>
     </div>
-    <script type="text/javascript" src="DiceRoller.js"></script>
+    <script src="DiceRoller.js"></script>
 </body>
 </html>
 

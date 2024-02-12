@@ -9,8 +9,9 @@ function rollDice() {
          {
             const randomValue = Math.floor(Math.random() * 6) + 1;
             document.getElementById(`dice${i}`).value = randomValue;
+            rollCount++;
         }
-        rollCount++;
+       
     }
 
     else {

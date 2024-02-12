@@ -18,6 +18,10 @@ button {
     cursor: pointer;
 }
 
+#instructions-container {
+    text-align: center; /* Add this line to center-align the text */
+}
+
 .dice-container {
     margin-top: 20px;
 }
@@ -38,7 +42,7 @@ input {
     color: #666;
 }
 
-/* Ensure that the results are right-justified */
 div p {
     text-align: right;
 }
+

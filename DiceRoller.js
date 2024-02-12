@@ -27,11 +27,11 @@ function displayResults() {
 
     const resultContainer = document.createElement("div");
     resultContainer.innerHTML = `<p>Results: ${diceValues.join(', ')}</p>
-                                  <button onclick="restart()">Roll Again</button>`;
+                                  <button onclick="rollAgain()">Roll Again?</button>`;
     document.body.appendChild(resultContainer);
 }
 
-function restart() {
+function rollAgain() {
     rollCount = 0;
     document.getElementById("rollButton").disabled = false;
     document.getElementById("rollButton").focus();
@@ -40,5 +40,6 @@ function restart() {
         document.getElementById(`dice${i}`).value = "";
     }
 }
+
 
 

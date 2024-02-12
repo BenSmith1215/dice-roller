@@ -11,9 +11,13 @@
         <h1>Yahtzee Dice Roller</h1>
         <button id="rollButton" onclick="rollDice()">Roll Dice</button>
         <div class="dice-container">
+            <!-- Use a loop to generate labels and input fields for Dice 1 to 5 -->
+            <!-- Ensure each input field has a unique id (dice1, dice2, ..., dice5) -->
+            <!-- Use the class "dice" for styling consistency -->
+            <!-- Example for Dice 1: -->
             <label for="dice1">Dice 1:</label>
-            <input type="text" id="dice1" readonly>
-            <!-- Repeat for dice 2 to 5 -->
+            <input type="text" id="dice1" class="dice" readonly>
+            <!-- Repeat for Dice 2 to 5 -->
 
             <p id="instructions">Press Enter or click "Roll Dice" to roll.</p>
         </div>
@@ -21,6 +25,7 @@
     <script src="DiceRoller.js"></script>
 </body>
 </html>
+
 
 
 
